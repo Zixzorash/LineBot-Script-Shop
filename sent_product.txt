@@ -10,7 +10,7 @@ function doGet(request){
 }
 
 function getcustdata(custid){
-  var sheeturl = 'https://docs.google.com/spreadsheets/d/14o2tyW7LLMwE3oVqVDqpI8sbtxSNNIOueHO5aXHcsF0/edit?usp=sharing'
+  var sheeturl = 'https://docs.google.com/spreadsheets/d/1KU8nEv-RtfnUzWMO9hnQFyO26C5BfZCbpJMKdlqGdEQ/edit'
   var sheetname = 'ออเดอร์'
   var psheet = gspandas.gsdataframe(sheeturl,sheetname)
   var pinfo = psheet.getrowdict('รหัสลูกค้า',custid)
@@ -39,7 +39,7 @@ function getcustdata(custid){
 
 function sendLineNotify(custid,token='SeUqAa7FtRpRoHyjdULloApftHPm3Ar2Sua9CqysibF') {
     var message = getcustdata(custid)
-    var token = [token]; //ใส่ access token ที่ใช้งาน
+    var token = 'LpXT9nKyCiE3kCY81udrfpXasFEABjuuR42E6u2xJh2'; //ใส่ access token ที่ใช้งาน
     var options = {
         "method": "post",
         "payload": "message=" + message,
