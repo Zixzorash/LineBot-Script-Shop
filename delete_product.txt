@@ -10,7 +10,7 @@ function doGet(request){
 
 
 function deleteorder(custid){
-    var sheeturl = 'https://docs.google.com/spreadsheets/d/14o2tyW7LLMwE3oVqVDqpI8sbtxSNNIOueHO5aXHcsF0/edit?usp=sharing'
+    var sheeturl = 'https://docs.google.com/spreadsheets/d/1KU8nEv-RtfnUzWMO9hnQFyO26C5BfZCbpJMKdlqGdEQ/edit'
     var sheetname = 'ออเดอร์'
     var psheet = gspandas.gsdataframe(sheeturl,sheetname)
     psheet.deleterows('รหัสลูกค้า',custid)
