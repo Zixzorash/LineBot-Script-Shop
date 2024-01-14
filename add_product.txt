@@ -13,8 +13,8 @@ function doGet(request){
  return ContentService.createTextOutput(result).setMimeType(ContentService.MimeType.JSON); 
 }
 
-function addorder(oid='1',custid='333',pname='ลาบเป็ด 1 จาน',quantity=1) {
-  var sheeturl = 'https://docs.google.com/spreadsheets/d/14o2tyW7LLMwE3oVqVDqpI8sbtxSNNIOueHO5aXHcsF0/edit?usp=sharing'
+function addorder(oid='111',custid='Ud72d3ca403fe6b1c3b142f9ca51acc5d',pname='ชัณมิกัญจน์',quantity=1) {
+  var sheeturl = 'https://docs.google.com/spreadsheets/d/1KU8nEv-RtfnUzWMO9hnQFyO26C5BfZCbpJMKdlqGdEQ/edit'
   var sheetname = 'สินค้า'
   var psheet = gspandas.gsdataframe(sheeturl,sheetname)
   var currentval = parseInt(psheet.getvalue('ชื่อสินค้า',pname,'ปริมาณ'),10)
