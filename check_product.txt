@@ -1,5 +1,5 @@
-function exploreclass(oid='1',custid='333',pname='ลาบเป็ด 1 จาน',quantity=1) {
-  var sheeturl = 'https://docs.google.com/spreadsheets/d/14o2tyW7LLMwE3oVqVDqpI8sbtxSNNIOueHO5aXHcsF0/edit?usp=sharing'
+function exploreclass(oid='111',custid='Ud72d3ca403fe6b1c3b142f9ca51acc5d',pname='ชัณมิกัญจน์ 1 ชิ้น',quantity=1) {
+  var sheeturl = 'https://docs.google.com/spreadsheets/d/1KU8nEv-RtfnUzWMO9hnQFyO26C5BfZCbpJMKdlqGdEQ/edit'
   var sheetname = 'สินค้า'
   var psheet = gspandas.gsdataframe(sheeturl,sheetname)
   var currentval = parseInt(psheet.getvalue('ชื่อสินค้า',pname,'ปริมาณ'),10)
@@ -12,8 +12,8 @@ function exploreclass(oid='1',custid='333',pname='ลาบเป็ด 1 จา
   osheet.sheet.appendRow(trx)
 }
 
-function getcustdata(custid='Uc217a79841540c1b0afe06312a885849'){
-  var sheeturl = 'https://docs.google.com/spreadsheets/d/14o2tyW7LLMwE3oVqVDqpI8sbtxSNNIOueHO5aXHcsF0/edit?usp=sharing'
+function getcustdata(custid='Ud72d3ca403fe6b1c3b142f9ca51acc5d'){
+  var sheeturl = 'https://docs.google.com/spreadsheets/d/1KU8nEv-RtfnUzWMO9hnQFyO26C5BfZCbpJMKdlqGdEQ/edit'
   var sheetname = 'ออเดอร์'
   var psheet = gspandas.gsdataframe(sheeturl,sheetname)
   var pinfo = psheet.getrowdict('รหัสลูกค้า',custid)
@@ -22,7 +22,7 @@ function getcustdata(custid='Uc217a79841540c1b0afe06312a885849'){
 }
 
 
-function getproductlistflex(custid='Uc217a79841540c1b0afe06312a885849'){
+function getproductlistflex(custid='Ud72d3ca403fe6b1c3b142f9ca51acc5d'){
   var datList = getcustdata(custid)
  let wlist = []
 let totalPrice = 0 // initialize the total price to 0
@@ -95,7 +95,7 @@ wlist.push(totalItem)
 
 
 
-function getproductflex(custid='Uc217a79841540c1b0afe06312a885849',altText='This is a Flex Message'){
+function getproductflex(custid='Ud72d3ca403fe6b1c3b142f9ca51acc5d',altText='This is a Flex Message'){
   itemflex = getproductlistflex(custid)
 
 
